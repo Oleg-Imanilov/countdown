@@ -36,12 +36,12 @@ body {
 <body>
     <div class="display" style="z-index: 1; color: rgba(0,100,0,0.2);">
         888888<br>
-        <span style="white-space: nowrap;">8888888888</span>
+        <span style="white-space: nowrap;">8888888</span>
     </div>
 
         <div class="glow display" style="z-index: 2;">
             -2021-<br>
-            <span id="cnt" style="white-space: nowrap;">88 88 88 88</span>
+            <span id="cnt" style="white-space: nowrap;">88 88 88</span>
         </div>
 
 <script>
@@ -54,9 +54,8 @@ body {
         var h = d2(23-t.getHours())
         var m = d2(59-t.getMinutes())
         var s = d2(59-t.getSeconds())
-        var ms = 9 - Math.floor((t.getMilliseconds()/100))
-        document.getElementById('cnt').innerHTML = `${h} ${m} ${s} ${ms}`
-    }, 20)
+        document.getElementById('cnt').innerHTML = `${h} ${m} ${s}`
+    }, 100)
 
 </script>
 
