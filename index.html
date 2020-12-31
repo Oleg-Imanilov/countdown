@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021</title>
+<style>
+@font-face {
+  font-family: 'd7';
+  src: url('Segment7-4Gml.otf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+body {
+    color: white;
+    background: rgb(13, 46, 7);
+}
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.xx {
+    color:rgb(14, 165, 14);
+    background: rgb(3, 114, 9);
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(3, 114, 9), 0 0 40px rgb(3, 114, 9), 0 0 50px rgb(3, 114, 9), 0 0 60px rgb(3, 114, 9), 0 0 70px rgb(3, 114, 9);
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px rgb(14, 165, 14), 0 0 40px rgb(14, 165, 14), 0 0 50px rgb(14, 165, 14), 0 0 60px rgb(14, 165, 14), 0 0 70px rgb(14, 165, 14), 0 0 80px rgb(14, 165, 14);
+  }
+}
+</style>
+
+</head>
+<body>
+        <div class="glow" style="text-align:center;position:absolute;left:50%;top:50%;font-family:d7;font-size:18vw;transform: translate(-50%,-50%);">
+            2021<br>
+            <span id="cnt" style="white-space: nowrap;">88 88 88</span>
+        </div>
+
+<script>
+    function d2(x) {
+        return ('00'+x).substr(-2)
+    }
+
+    setInterval(function(){
+        var t = new Date()
+        var h = d2(23-t.getHours())
+        var m = d2(59-t.getMinutes())
+        var s = d2(59-t.getSeconds())
+
+        document.getElementById('cnt').innerHTML = `${h} ${m} ${s}`
+    }, 1000)
+
+</script>
+
+</body>
+</html>
